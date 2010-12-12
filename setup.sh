@@ -23,3 +23,13 @@ read ANSWER
 if [ $ANSWER = "y" ]; then
         sudo apt-get install ruby irb ri rdoc ruby1.8-dev
 fi
+
+read -p "You are going install: Gem 1.3.7  y/n?" ANSWER
+if [ $ANSWER = "y" ]; then
+	cd /tmp
+	wget http://rubyforge.org/frs/download.php/70696/rubygems-1.3.7.tgz
+	tar zxf rubygems-1.3.7.tgz
+	cd rubygems-1.3.7
+	sudo ruby setup.rb
+	sudo ln -sfv /usr/bin/gem1.8 /usr/bin/gem
+fi
