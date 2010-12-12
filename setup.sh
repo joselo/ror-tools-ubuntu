@@ -12,8 +12,14 @@ if [ $USERNAME != "root" ]; then
   exit 1
 fi
 
-echo "You are going install git y/n?"
+echo "You are going install: git y/n?"
 read ANSWER
 if [ $ANSWER = "y" ]; then
         sudo apt-get install git-core
+fi
+
+echo "You are going install: ruby irb ri rdoc ruby1.8-dev y/n?"
+read ANSWER
+if [ $ANSWER = "y" ]; then
+        sudo apt-get install ruby irb ri rdoc ruby1.8-dev
 fi
