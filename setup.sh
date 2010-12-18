@@ -24,6 +24,12 @@ if [ $ANSWER = "y" ]; then
         sudo apt-get install ruby irb ri rdoc ruby1.8-dev
 fi
 
+echo "You are going sqlite3: sqlite3 libsqlite3-dev y/n?"
+read ANSWER
+if [ $ANSWER = "y" ]; then
+	sudo apt-get install sqlite3 libsqlite3-dev
+fi
+
 read -p "You are going install: Gem 1.3.7  y/n?" ANSWER
 if [ $ANSWER = "y" ]; then
 	cd /tmp
