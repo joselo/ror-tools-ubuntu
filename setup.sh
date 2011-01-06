@@ -15,13 +15,13 @@ fi
 echo "You are going install: git y/n?"
 read ANSWER
 if [ $ANSWER = "y" ]; then
-        sudo apt-get install git-core
+  sudo apt-get install git-core
 fi
 
 echo "You are going install: ruby irb ri rdoc ruby1.8-dev y/n?"
 read ANSWER
 if [ $ANSWER = "y" ]; then
-        sudo apt-get install ruby irb ri rdoc ruby1.8-dev
+  sudo apt-get install ruby irb ri rdoc ruby1.8-dev
 fi
 
 echo "You are going sqlite3: sqlite3 libsqlite3-dev y/n?"
@@ -29,6 +29,13 @@ read ANSWER
 if [ $ANSWER = "y" ]; then
 	sudo apt-get install sqlite3 libsqlite3-dev
 fi
+
+echo "Install mysql-server y/n?"
+read ANSWER
+if [ $ANSWER = "y" ]; then
+  sudo apt-get install mysql-server libmysqlclient-dev libmysql-ruby
+fi
+
 
 read -p "You are going install: Gem 1.3.7  y/n?" ANSWER
 if [ $ANSWER = "y" ]; then
